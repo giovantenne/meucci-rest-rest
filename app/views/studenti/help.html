@@ -1,0 +1,83 @@
+<table id="route_table" class="route_table" border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>HTTP Verb</th>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="matched_paths" id="matched_paths">
+  </tbody>
+  <tbody>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="studenti">
+          /studenti
+      </td>
+      <td data-route-verb="GET">
+        GET
+      </td>
+      <td data-route-path="/studenti(.:format)" data-regexp="^\/studenti(?:\.([^\/.?]+))?$">
+      </td>
+      <td data-route-reqs="studenti#index {:format=>&quot;xml&quot;}">
+        Elenco studenti
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="studenti">
+          /studenti
+      </td>
+      <td data-route-verb="GET">
+        POST
+      </td>
+      <td data-route-path="/studenti(.:format)" data-regexp="^\/studenti(?:\.([^\/.?]+))?$">
+        studente[nome], studente[cognome], studente[data_di_nascita]::integer
+      </td>
+      <td data-route-reqs="studenti#index {:format=>&quot;xml&quot;}">
+        Creazione nuovo studente
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="studenti">
+          /studenti/:id
+      </td>
+      <td data-route-verb="GET">
+        GET
+      </td>
+      <td data-route-path="/studenti(.:format)" data-regexp="^\/studenti(?:\.([^\/.?]+))?$">
+      </td>
+      <td data-route-reqs="studenti#index {:format=>&quot;xml&quot;}">
+        Visualizza studente
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="studenti">
+          /studenti/:id
+      </td>
+      <td data-route-verb="GET">
+        PUT / PATCH
+      </td>
+      <td data-route-path="/studenti(.:format)" data-regexp="^\/studenti(?:\.([^\/.?]+))?$">
+        studente[nome], studente[cognome], studente[data_di_nascita]::integer
+      </td>
+      <td data-route-reqs="studenti#index {:format=>&quot;xml&quot;}">
+        Aggiorna studente
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="studenti">
+          /studenti/:id
+      </td>
+      <td data-route-verb="GET">
+        DELETE
+      </td>
+      <td data-route-path="/studenti(.:format)" data-regexp="^\/studenti(?:\.([^\/.?]+))?$">
+      </td>
+      <td data-route-reqs="studenti#index {:format=>&quot;xml&quot;}">
+        Elimina studente
+      </td>
+    </tr>
+
+
+  </tbody>
+</table>
