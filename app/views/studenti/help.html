@@ -31,7 +31,7 @@
         POST
       </td>
       <td data-route-path="/studenti(.:format)" data-regexp="^\/studenti(?:\.([^\/.?]+))?$">
-        studente[nome], studente[cognome], studente[data_di_nascita]::integer
+        studente[nome], studente[cognome], studente[anno_di_nascita]::integer
       </td>
       <td data-route-reqs="studenti#index {:format=>&quot;xml&quot;}">
         Creazione nuovo studente
@@ -58,7 +58,7 @@
         PUT / PATCH
       </td>
       <td data-route-path="/studenti(.:format)" data-regexp="^\/studenti(?:\.([^\/.?]+))?$">
-        studente[nome], studente[cognome], studente[data_di_nascita]::integer
+        studente[nome], studente[cognome], studente[anno_di_nascita]::integer
       </td>
       <td data-route-reqs="studenti#index {:format=>&quot;xml&quot;}">
         Aggiorna studente
