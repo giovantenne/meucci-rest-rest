@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
 
-  resources :prodotti
+  resources :prodotti do
+    collection do
+      get 'help'
+    end
+  end
 
   resources :studenti do
     collection do
