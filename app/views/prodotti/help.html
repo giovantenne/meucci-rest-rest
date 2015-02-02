@@ -1,0 +1,83 @@
+<table id="route_table" class="route_table" border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>HTTP Verb</th>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="matched_paths" id="matched_paths">
+  </tbody>
+  <tbody>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="prodotti">
+          /prodotti.xml
+      </td>
+      <td data-route-verb="GET">
+        GET
+      </td>
+      <td data-route-path="/prodotti(.:format)" data-regexp="^\/prodotti(?:\.([^\/.?]+))?$">
+      </td>
+      <td data-route-reqs="prodotti#index {:format=>&quot;xml&quot;}">
+        Elenco prodotti
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="prodotti">
+          /prodotti.xml
+      </td>
+      <td data-route-verb="GET">
+        POST
+      </td>
+      <td data-route-path="/prodotti(.:format)" data-regexp="^\/prodotti(?:\.([^\/.?]+))?$">
+        prodotto[nome], prodotto[descrizione], prodotto[prezzo]::float
+      </td>
+      <td data-route-reqs="prodotti#index {:format=>&quot;xml&quot;}">
+        Creazione nuovo prodotto
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="prodotti">
+          /prodotti/:id.xml
+      </td>
+      <td data-route-verb="GET">
+        GET
+      </td>
+      <td data-route-path="/prodotti(.:format)" data-regexp="^\/prodotti(?:\.([^\/.?]+))?$">
+      </td>
+      <td data-route-reqs="prodotti#index {:format=>&quot;xml&quot;}">
+        Visualizza prodotto
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="prodotti">
+          /prodotti/:id.xml
+      </td>
+      <td data-route-verb="GET">
+        PUT / PATCH
+      </td>
+      <td data-route-path="/prodotti(.:format)" data-regexp="^\/prodotti(?:\.([^\/.?]+))?$">
+        prodotto[nome], prodotto[descrizione], prodotto[prezzo]::float
+      </td>
+      <td data-route-reqs="prodotti#index {:format=>&quot;xml&quot;}">
+        Aggiorna prodotto
+      </td>
+    </tr>
+    <tr class="route_row" data-helper="path">
+      <td data-route-name="prodotti">
+          /prodotti/:id.xml
+      </td>
+      <td data-route-verb="GET">
+        DELETE
+      </td>
+      <td data-route-path="/prodotti(.:format)" data-regexp="^\/prodotti(?:\.([^\/.?]+))?$">
+      </td>
+      <td data-route-reqs="prodotti#index {:format=>&quot;xml&quot;}">
+        Elimina prodotto
+      </td>
+    </tr>
+
+
+  </tbody>
+</table>
