@@ -42,8 +42,8 @@ class ProdottiController < ApplicationController
     respond_to do |format|
       if @prodotto.save
         format.html { redirect_to @prodotto, notice: 'Prodotto was successfully created.' }
-        format.xml { render :show, status: :created, location: @prodotto }
-        format.json { render :show, status: :created, location: @prodotto }
+        format.json { render json: @prodotto, status: :created }
+        format.xml { render xml: @prodotto, status: :created }
       else
         format.html { render :new }
         format.xml { render json: @prodotto.errors, status: :unprocessable_entity }
@@ -59,8 +59,8 @@ class ProdottiController < ApplicationController
     respond_to do |format|
       if @prodotto.update(prodotto_params)
         format.html { redirect_to @prodotto, notice: 'Prodotto was successfully updated.' }
-        format.xml { render :show, status: :ok, location: @prodotto }
-        format.json { render :show, status: :ok, location: @prodotto }
+        format.json { head :no_content, status: :ok }
+        format.xml { head :no_content, status: :ok }
       else
         format.html { render :edit }
         format.xml { render json: @prodotto.errors, status: :unprocessable_entity }
