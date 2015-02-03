@@ -7,9 +7,9 @@ class ProdottiController < ApplicationController
   def index
     @prodotti = Prodotto.all
     respond_to do |format|
-      #format.html # index.html.erb
+      format.html # index.html.erb
       format.xml  { render xml: @prodotti }
-      #format.json { render json: @prodotti }
+      format.json { render json: @prodotti }
     end
   end
 
@@ -20,7 +20,7 @@ class ProdottiController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render xml: @prodotto }
-      #format.json { render json: @prodotto }
+      format.json { render json: @prodotto }
     end
   end
 
@@ -43,11 +43,11 @@ class ProdottiController < ApplicationController
       if @prodotto.save
         format.html { redirect_to @prodotto, notice: 'Prodotto was successfully created.' }
         format.xml { render :show, status: :created, location: @prodotto }
-        #format.json { render :show, status: :created, location: @prodotto }
+        format.json { render :show, status: :created, location: @prodotto }
       else
         format.html { render :new }
         format.xml { render json: @prodotto.errors, status: :unprocessable_entity }
-        #format.json { render json: @prodotto.errors, status: :unprocessable_entity }
+        format.json { render json: @prodotto.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class ProdottiController < ApplicationController
       if @prodotto.update(prodotto_params)
         format.html { redirect_to @prodotto, notice: 'Prodotto was successfully updated.' }
         format.xml { render :show, status: :ok, location: @prodotto }
-        #format.json { render :show, status: :ok, location: @prodotto }
+        format.json { render :show, status: :ok, location: @prodotto }
       else
         format.html { render :edit }
         format.xml { render json: @prodotto.errors, status: :unprocessable_entity }
-        #format.json { render json: @prodotto.errors, status: :unprocessable_entity }
+        format.json { render json: @prodotto.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -77,7 +77,7 @@ class ProdottiController < ApplicationController
     respond_to do |format|
       format.html { redirect_to prodotti_url, notice: 'Prodotto was successfully destroyed.' }
       format.xml { head :no_content }
-      #format.json { head :no_content }
+      format.json { head :no_content }
     end
   end
 

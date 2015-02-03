@@ -11,6 +11,7 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'byebug'
 end
 
 # Use SCSS for stylesheets
@@ -45,4 +46,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "actionpack-xml_parser"
+#gem 'actionpack-xml_parser', github: 'rails/actionpack-xml_parser'
 
