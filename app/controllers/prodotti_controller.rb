@@ -18,7 +18,7 @@ class ProdottiController < ApplicationController
   # GET /prodotti/1.json
   def show
     respond_to do |format|
-      #format.html # show.html.erb
+      format.html # show.html.erb
       format.xml  { render xml: @prodotto }
       #format.json { render json: @prodotto }
     end
@@ -41,11 +41,11 @@ class ProdottiController < ApplicationController
 
     respond_to do |format|
       if @prodotto.save
-        #format.html { redirect_to @prodotto, notice: 'Prodotto was successfully created.' }
+        format.html { redirect_to @prodotto, notice: 'Prodotto was successfully created.' }
         format.xml { render :show, status: :created, location: @prodotto }
         #format.json { render :show, status: :created, location: @prodotto }
       else
-        #format.html { render :new }
+        format.html { render :new }
         format.xml { render json: @prodotto.errors, status: :unprocessable_entity }
         #format.json { render json: @prodotto.errors, status: :unprocessable_entity }
       end
@@ -58,11 +58,11 @@ class ProdottiController < ApplicationController
   def update
     respond_to do |format|
       if @prodotto.update(prodotto_params)
-        #format.html { redirect_to @prodotto, notice: 'Prodotto was successfully updated.' }
+        format.html { redirect_to @prodotto, notice: 'Prodotto was successfully updated.' }
         format.xml { render :show, status: :ok, location: @prodotto }
         #format.json { render :show, status: :ok, location: @prodotto }
       else
-        #format.html { render :edit }
+        format.html { render :edit }
         format.xml { render json: @prodotto.errors, status: :unprocessable_entity }
         #format.json { render json: @prodotto.errors, status: :unprocessable_entity }
       end
@@ -75,7 +75,7 @@ class ProdottiController < ApplicationController
   def destroy
     @prodotto.destroy
     respond_to do |format|
-      #format.html { redirect_to prodotti_url, notice: 'Prodotto was successfully destroyed.' }
+      format.html { redirect_to prodotti_url, notice: 'Prodotto was successfully destroyed.' }
       format.xml { head :no_content }
       #format.json { head :no_content }
     end
